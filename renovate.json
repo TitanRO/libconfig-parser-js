@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>TitanRO/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "description": "This repo has no CI, so nothing merges by itself.",
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "digest",
+        "pin",
+        "pinDigest",
+        "lockFileMaintenance"
+      ],
+      "automerge": false
+    }
+  ],
+  "gitlabci": {
+    "enabled": false
+  }
+}
